@@ -2,7 +2,7 @@
 # $FreeBSD: head/sysutils/rubygem-chef-zero/Makefile 351383 2014-04-16 13:35:29Z swills $
 
 PORTNAME=	chef-zero
-PORTVERSION=	2.0.2
+PORTVERSION=	2.2
 CATEGORIES=	sysutils
 MASTER_SITES=	RG
 
