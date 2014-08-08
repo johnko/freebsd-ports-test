@@ -1,0 +1,16 @@
+--- ./man/CMakeLists.txt.orig	2014-03-28 12:56:44.000000000 -0400
++++ ./man/CMakeLists.txt	2014-03-28 12:58:16.000000000 -0400
+@@ -31,9 +31,13 @@
+ SET(MAN1_TEST mysql-stress-test.pl.1 mysql-test-run.pl.1 mysql_client_test.1
+               mysqltest_embedded.1 mysql_client_test_embedded.1)
+ 
++IF(FALSE)
+ INSTALL(FILES ${MAN1_SERVER} DESTINATION ${INSTALL_MANDIR}/man1 COMPONENT ManPagesServer)
+ INSTALL(FILES ${MAN8_SERVER} DESTINATION ${INSTALL_MANDIR}/man8 COMPONENT ManPagesServer)
++ENDIF()
+ INSTALL(FILES ${MAN1_CLIENT} DESTINATION ${INSTALL_MANDIR}/man1 COMPONENT ManPagesClient)
+ INSTALL(FILES ${MAN1_DEVEL} DESTINATION ${INSTALL_MANDIR}/man1 COMPONENT ManPagesDevelopment)
++IF(FALSE)
+ INSTALL(FILES ${MAN1_TEST} DESTINATION ${INSTALL_MANDIR}/man1 COMPONENT ManPagesTest)
++ENDIF()
+ 

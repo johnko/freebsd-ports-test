@@ -1,0 +1,37 @@
+--- ./support-files/CMakeLists.txt.orig	2014-03-28 16:30:36.000000000 -0400
++++ ./support-files/CMakeLists.txt	2014-03-28 16:32:22.000000000 -0400
+@@ -41,15 +41,18 @@
+   SET(inst_location ${INSTALL_SUPPORTFILESDIR})
+ ENDIF()
+ 
++IF(FALSE)
+ FOREACH(inifile my-huge my-innodb-heavy-4G my-large my-medium my-small wsrep)
+   CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/${inifile}.cnf.sh 
+                  ${CMAKE_CURRENT_BINARY_DIR}/${inifile}.${ini_file_extension} @ONLY)
+   INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/${inifile}.${ini_file_extension}
+           DESTINATION ${inst_location} COMPONENT IniFiles)
+ ENDFOREACH()
++ENDIF()
+ 
+ IF(UNIX)
+   SET(prefix ${CMAKE_INSTALL_PREFIX})
++IF(FALSE)
+   FOREACH(script  mysqld_multi.server mysql-log-rotate binary-configure
+     config.medium.ini config.small.ini config.huge.ini ndb-config-2-node.ini)
+     CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/${script}.sh 
+@@ -68,8 +71,10 @@
+     INSTALL(FILES magic DESTINATION ${inst_location} COMPONENT SupportFiles)
+     INSTALL(DIRECTORY RHEL4-SElinux/ DESTINATION ${inst_location}/SELinux/RHEL4 COMPONENT SupportFiles)
+   ENDIF()
++ENDIF()
+ 
+   INSTALL(FILES mysql.m4 DESTINATION ${INSTALL_SHAREDIR}/aclocal COMPONENT Development)
++IF(FALSE)
+   CONFIGURE_FILE(MySQL-shared-compat.spec.sh ${CMAKE_CURRENT_BINARY_DIR}/MySQL-shared-compat.spec @ONLY)
+   CONFIGURE_FILE(mysql.spec.sh ${CMAKE_CURRENT_BINARY_DIR}/mysql.spec @ONLY)
+   
+@@ -129,3 +134,4 @@
+                    COMPONENT SupportFiles)
+   ENDIF(INSTALL_SYSCONFDIR)
+ ENDIF()
++ENDIF()

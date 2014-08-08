@@ -1,0 +1,24 @@
+MariaDB Galera Cluster is a synchronous multi-master cluster for MariaDB.
+
+Features:
+- Synchronous replication
+- Active-active multi-master topology
+- Read and write to any cluster node
+- Automatic membership control, failed nodes drop from the cluster
+- Automatic node joining
+- True parallel replication, on row level
+- Direct client connections, native MySQL look & feel
+
+The above features yield several benefits for a DBMS clustering solution,
+including:
+- No slave lag
+- No lost transactions
+- Both read and write scalability
+- Smaller client latencies
+
+It uses the Galera library for the replication implementation with wsrep API.
+
+wsrep patch compatible with databases/galera
+https://code.launchpad.net/~maria-captains/maria/maria-5.5-galera
+
+WWW: https://downloads.mariadb.org/mariadb-galera/
