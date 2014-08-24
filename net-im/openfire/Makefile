@@ -1,5 +1,5 @@
 # Created by: Nikolay Pavlov <qpadla@gmail.com>
-# $FreeBSD: head/net-im/openfire/Makefile 354620 2014-05-20 09:14:02Z gahr $
+# $FreeBSD$
 
 PORTNAME=	openfire
 PORTVERSION=	3.9.3
@@ -25,7 +25,7 @@ DOS2UNIX_FILES=	src/java/org/jivesoftware/openfire/server/ServerDialback.java
 USE_LDCONFIG=	yes
 USE_ANT=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.7
+JAVA_VERSION=	1.6 1.7
 
 ALL_TARGET=	openfire
 USE_RC_SUBR=	openfire

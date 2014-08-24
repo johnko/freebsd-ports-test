@@ -1,5 +1,5 @@
 # Created by: Renaud Chaput <renchap@cocoa-x.com>
-# $FreeBSD: head/sysutils/rubygem-chef/Makefile 351384 2014-04-16 13:40:14Z swills $
+# $FreeBSD$
 
 PORTNAME=	chef
 PORTVERSION=	11.14.2

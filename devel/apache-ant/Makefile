@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: head/devel/apache-ant/Makefile 363781 2014-08-02 04:37:49Z pi $
+# $FreeBSD$
 
 PORTNAME=	apache-ant
 PORTVERSION=	1.9.4
@@ -24,7 +24,7 @@ MANPAGE_DISTFILE=	${PORTNAME}-manpage-${MANPAGE_VERSION}.tgz
 MANPAGE_VERSION=	20030908
 USES=		tar:bzip2
 USE_JAVA=	yes
-JAVA_VERSION= 1.7
+JAVA_VERSION=	1.7
 
 NO_BUILD=	YES
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}

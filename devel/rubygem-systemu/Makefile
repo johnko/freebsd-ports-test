@@ -1,5 +1,5 @@
 # Created by: renchap@cocoa-x.com
-# $FreeBSD: head/devel/rubygem-systemu/Makefile 357277 2014-06-10 07:39:01Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	systemu
 PORTVERSION=	2.6.4

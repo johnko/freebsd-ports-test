@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: head/devel/slf4j/Makefile 354756 2014-05-21 18:20:09Z skreuzer $
+# $FreeBSD$
 
 PORTNAME=	slf4j
 PORTVERSION=	1.7.7
@@ -10,7 +10,7 @@ MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Simple facade or abstraction for various logging frameworks
 
 USE_JAVA=	1.4+
-JAVA_VERSION= 1.7
+JAVA_VERSION=	1.7
 NO_BUILD=	YES
 
 JARFILES=	slf4j-migrator.jar \
