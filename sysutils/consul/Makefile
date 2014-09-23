@@ -1,13 +1,13 @@
 # $FreeBSD$
 
-PORTNAME=			consul
-PORTVERSION=	0.3.1
+PORTNAME=		consul
+PORTVERSION=		0.3.1
 CATEGORIES=		sysutils
 
 MAINTAINER=		thomas@bartelmess.io
-COMMENT=			Consul
+COMMENT=		Consul
 
-LICENSE=			MPL
+LICENSE=		MPL
 
 USE_GITHUB=		yes
 GH_ACCOUNT=		hashicorp
@@ -15,8 +15,7 @@ GH_COMMIT=		6c2ee5c
 GH_TAGNAME=		v${PORTVERSION}
 
 GO_PKGNAME=		github.com/hashicorp/${PORTNAME}
-CC?=					clang
-GO_ENV+=			CC="${CC}"
+GO_ENV+=		CC="clang"
 
 do-build:
 	@(cd ${GO_WRKSRC}; ${SETENV} ${GO_ENV} ${GO_CMD} get . )
@@ -24,7 +23,7 @@ do-build:
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${GO_WRKDIR_BIN}/consul ${STAGEDIR}${PREFIX}/bin/consul
+	${CP} ${GO_WRKDIR_BIN}/consul ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/lang/go/files/bsd.go.mk"
