@@ -26,6 +26,6 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${GO_WRKDIR_BIN}/consul ${STAGEDIR}${PREFIX}/bin/consul
 
-.include <bsd.port.pre.mk>
+.include "${.CURDIR}/../../Mk/bsd.port.pre.mk"
 .include "${.CURDIR}/../../lang/go/files/bsd.go.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../../Mk/bsd.port.post.mk"
