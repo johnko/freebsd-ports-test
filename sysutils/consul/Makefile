@@ -21,7 +21,7 @@ CC?=					clang
 GO_ENV+=			CC="${CC}"
 
 do-fetch:
-	@(cd ${GO_WRKSRC}; ${SETENV} ${GO_ENV} ${GO_CMD} get . )
+	@(${MKDIR} ${GO_WRKSRC}; cd ${GO_WRKSRC}; ${SETENV} ${GO_ENV} ${GO_CMD} get . )
 
 do-build:
 	@(cd ${GO_WRKSRC}; ${SETENV} ${GO_ENV} ${GO_CMD} install ${GO_TARGET})
