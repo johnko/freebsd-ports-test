@@ -9,6 +9,8 @@ COMMENT=			Consul
 
 LICENSE=			MPL
 
+BUILD_DEPENDS=	git:${PORTSDIR}/devel/git
+
 USE_GITHUB=		yes
 GH_ACCOUNT=		hashicorp
 GH_COMMIT=		6c2ee5c
