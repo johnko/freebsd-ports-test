@@ -9,8 +9,6 @@ COMMENT=			Consul
 
 LICENSE=			MPL
 
-FETCH_DEPENDS=	git:${PORTSDIR}/devel/git
-
 USE_GITHUB=		yes
 GH_ACCOUNT=		hashicorp
 GH_COMMIT=		6c2ee5c
@@ -20,10 +18,8 @@ GO_PKGNAME=		github.com/hashicorp/${PORTNAME}
 CC?=					clang
 GO_ENV+=			CC="${CC}"
 
-do-fetch:
-	@(${MKDIR} ${GO_WRKSRC}; cd ${GO_WRKSRC}; ${SETENV} ${GO_ENV} ${GO_CMD} get . )
-
 do-build:
+	@(cd ${GO_WRKSRC}; ${SETENV} ${GO_ENV} ${GO_CMD} get . )
 	@(cd ${GO_WRKSRC}; ${SETENV} ${GO_ENV} ${GO_CMD} install ${GO_TARGET})
 
 do-install:
