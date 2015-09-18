@@ -1,0 +1,5 @@
+The GitLab port provides a basic working configuration, but
+it depends on other software too. A basic guide to install
+GitLab can be found here:
+
+https://github.com/t-zuehlsdorff/gitlabhq/blob/master/doc/install/installation-freebsd.md
