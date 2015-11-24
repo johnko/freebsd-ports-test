@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab
-PORTVERSION=	7.14.1
+PORTVERSION=	7.14.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www devel
 
@@ -41,7 +41,7 @@ RUN_DEPENDS=	git:${PORTSDIR}/devel/git \
 	rubygem-rqrcode-rails3>=0.1.7:${PORTSDIR}/www/rubygem-rqrcode-rails3 \
 	rubygem-attr_encrypted>=1.3.4:${PORTSDIR}/security/rubygem-attr_encrypted \
 	rubygem-browser>=0.8.0:${PORTSDIR}/www/rubygem-browser \
-	rubygem-gitlab_git-rails41>=7.2.5:${PORTSDIR}/devel/rubygem-gitlab_git-rails41 \
+	rubygem-gitlab_git-rails41>=7.2.15:${PORTSDIR}/devel/rubygem-gitlab_git-rails41 \
 	rubygem-gitlab-grack>=2.0.2:${PORTSDIR}/www/rubygem-gitlab-grack \
 	rubygem-gitlab_omniauth-ldap>=1.2.1:${PORTSDIR}/net/rubygem-gitlab_omniauth-ldap \
 	rubygem-gollum-lib>=4.0.2:${PORTSDIR}/www/rubygem-gollum-lib \
